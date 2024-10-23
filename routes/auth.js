@@ -11,14 +11,16 @@ const JWT_SECRET = process.env.JWT_SECRET || 'mysecret';
 // @desc     Register a new user
 // @access   Public
 router.post('/signup', async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, confirmPassword } = req.body;
 
   // Basic validation
-  if (!name || !email || !password) {
+  if (!name || !email || !password || !confirmPassword) {
     return res.status(400).json({ error: 'Please fill all fields' });
   }
 
-  
+  if (password !== confirmPassword) {
+    return res.status(400).json({ error: 'Passwords do not match' });
+  }
 
   try {
     // Check if the user already exists
