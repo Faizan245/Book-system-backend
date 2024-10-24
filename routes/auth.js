@@ -78,4 +78,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.post('/logout', (req, res) => {
+  // Assuming the client removes the token, we can just return a success response
+  res.status(200).json({ message: 'Logout successful' });
+});
+
 module.exports = router;
