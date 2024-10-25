@@ -1,7 +1,7 @@
 # Book Recommendation System - Backend
 
 ## Overview
-This is the backend component of the Book Recommendation System built with Node.js and Express. It connects to a MongoDB database and integrates with the Google Books API to provide book recommendations based on user input.
+This is the backend component of the Book Recommendation System built with Node.js and Express. It connects to a MongoDB database and integrates authentication APIs to create a user, login a user, logout a user.
 
 ## Table of Contents
 - [Technologies Used](#technologies-used)
